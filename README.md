@@ -25,6 +25,7 @@ current pico W wifi, lcd, motionsensor, buzzer
     #define WIFI_PASS "YOUR_WIFI_PW"
     
     #endif 
+EOF
 ```
 
 3. **You can find and change LCD, BUZZER and MOTIONSENSOR pins in /include/functions.h**
