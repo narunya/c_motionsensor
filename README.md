@@ -11,7 +11,6 @@ current pico W wifi, lcd, motionsensor, buzzer
 ## Installation
 
 1.  **Clone:**
-
 ```bash
     git clone https://github.com/narunya/c_motionsensor.git
 ```
@@ -26,13 +25,10 @@ current pico W wifi, lcd, motionsensor, buzzer
     #define WIFI_PASS "YOUR_WIFI_PW"
     
     #endif 
-    
 ```
-
 
 3. **You can find and change LCD, BUZZER and MOTIONSENSOR pins in /include/functions.h**
 ```
-
 //pins
 #define BUZZER_PIN 14
 #define TRIGGER_PIN 2
