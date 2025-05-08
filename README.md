@@ -17,15 +17,15 @@ current pico W wifi, lcd, motionsensor, buzzer
 
 2.  **Create headerfile with WiFi-credentials:**
 ```bash
-    cat > include/wifi_config.h << EOF
-    #ifndef WIFI_CONFIG_H
-    #define WIFI_CONFIG_H
-    
-    #define WIFI_SSID "YOUR_WIFI_ID"
-    #define WIFI_PASS "YOUR_WIFI_PW"
-    
-    #endif 
-    EOF
+cat > include/wifi_config.h << EOF
+#ifndef WIFI_CONFIG_H
+#define WIFI_CONFIG_H
+
+#define WIFI_SSID "YOUR_WIFI_ID"
+#define WIFI_PASS "YOUR_WIFI_PW"
+
+#endif
+EOF
 ```
 
 2.1 **Create headerfile with MQTT-configuration:**
