@@ -1,4 +1,4 @@
-add_executable(pico_mqtt main.c functions.c lcd.c)
+add_executable(pico_mqtt main.c functions.c lcd.c mqtt_functions.c)
 target_include_directories(pico_mqtt PRIVATE ${CMAKE_SOURCE_DIR}/include)
 set_target_properties(pico_mqtt PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
