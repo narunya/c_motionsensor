@@ -30,6 +30,7 @@ EOF
 
 2.1 **Create headerfile with MQTT-configuration:**
 ```bash
+cat < include/mqtt_config.h << EOF
 #pragma once
 
 #define _MQTT_BROKER_IP "YOUR_BROKER_IP"
@@ -39,7 +40,7 @@ EOF
 #define MQTT_DEVICE_NAME "pico-w" // change name on your device if you want..
 
 #endif
-
+EOF
 ```
 
 
