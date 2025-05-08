@@ -15,7 +15,7 @@ current pico W wifi, lcd, motionsensor, buzzer
     git clone https://github.com/narunya/c_motionsensor.git
 ```
 
-2.  **Create headerfil with WiFi-credentials:**
+2.  **Create headerfile with WiFi-credentials:**
 ```bash
     cat > include/wifi_config.h << EOF
     #ifndef WIFI_CONFIG_H
@@ -27,6 +27,22 @@ current pico W wifi, lcd, motionsensor, buzzer
     #endif 
 EOF
 ```
+
+2.1 **Create headerfile with MQTT-configuration:**
+
+```bash
+#pragma once
+
+#define _MQTT_BROKER_IP "YOUR_BROKER_IP"
+#define _MQTT_PORT 1883 // standard port
+
+#ifndef MQTT_DEVICE_NAME
+#define MQTT_DEVICE_NAME "pico-w" // change name on your device if you want..
+
+#endif
+
+```
+
 
 3. **You can find and change LCD, BUZZER and MOTIONSENSOR pins in /include/functions.h**
 ```
