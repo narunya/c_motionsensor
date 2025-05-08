@@ -29,7 +29,6 @@ EOF
 ```
 
 2.1 **Create headerfile with MQTT-configuration:**
-
 ```bash
 #pragma once
 
