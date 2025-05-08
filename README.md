@@ -25,7 +25,7 @@ current pico W wifi, lcd, motionsensor, buzzer
     #define WIFI_PASS "YOUR_WIFI_PW"
     
     #endif 
-EOF
+    EOF
 ```
 
 2.1 **Create headerfile with MQTT-configuration:**
