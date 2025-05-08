@@ -43,14 +43,13 @@ int main(void) {
     lcd_set_cursor(0, 0);
     lcd_print("Trying MQTT");
 
-    // MQTT setup
+    
     mqtt_client_t *client = NULL;
     struct mqtt_connect_client_info_t pico;
     if (!mqtt_connect(&client, _MQTT_BROKER_IP, MQTT_DEVICE_NAME, &pico)) {
         printf("MQTT connect failed\n");
     }
 
-    // Wait until MQTT is connected (timeout after 10 seconds)
     int waited = 0;
     while (!mqtt_connected && waited < 10000) {
         cyw43_arch_poll();
@@ -61,14 +60,13 @@ int main(void) {
     if (!mqtt_connected) {
         lcd_set_cursor(1, 0);
         lcd_print("MQTT failed!");
-        while (1); // Stop here or retry logic
+        while (1); 
     }
 
     lcd_clear();
     lcd_print("MQTT connected");
 
-    // Main loop
-    while (1) {
+    while (true) {
         cyw43_arch_poll();
 
         float distance = measureDistance();
@@ -81,7 +79,7 @@ int main(void) {
 
         if (alarm_react) {
             lcd_warning(buffer);
-            buzz(200);  // Keep short
+            buzz(200);  
         }
 
         if (alarm_triggered) {
